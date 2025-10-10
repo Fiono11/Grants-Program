@@ -1,8 +1,8 @@
 const lightCodeTheme = require('prism-react-renderer').themes.github;
 const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 // needed for LaTeX compatibility
-const math = require('remark-math');
-const katex = require('rehype-katex');
+const math = require('remark-math').default;
+const katex = require('rehype-katex').default;
 
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -35,7 +35,7 @@ module.exports = {
     announcementBar: {
       id: 'announcement',
       content:
-        '<a target="_blank" rel="noopener noreferrer" href="https://medium.com/web3foundation/web3-foundation-ecodev-wave-25-300a9e0933f7">Our blog post on Q1 2025 / Wave 25 is now online!</a>',
+        '<a target="_blank" rel="noopener noreferrer" href="https://medium.com/web3foundation/web3-foundation-ecodev-wave-26-7f145c39c2ef">Our blog post on Ecosystem Development Wave 26 is now online!</a>',
       backgroundColor: '#000',
       textColor: '#ffffff',
       isCloseable: true,
@@ -138,10 +138,6 @@ module.exports = {
           // showLastUpdateAuthor: true,
           // showLastUpdateTime: true,
           sidebarPath: require.resolve('./sidebars.js'),
-          beforeDefaultRehypePlugins: [
-          ],
-          beforeDefaultRemarkPlugins: [
-          ],
           remarkPlugins: [
             math,
           ],
